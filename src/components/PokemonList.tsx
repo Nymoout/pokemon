@@ -2,7 +2,6 @@
 
 import {
   Typography,
-  Box,
   Card,
 } from '@mui/material'
 import PokemonCard from './PokemonCard'
@@ -23,14 +22,19 @@ export default function PokemonList({
 }: PokemonListProps) {
   if (pokemon.length === 0) {
     return (
-      <Box textAlign='center' py={8}>
+      <Card
+        sx={{
+          p: 4,
+          borderRadius: 5
+        }}
+      >
         <Typography variant='h6' color='text.secondary'>
           📝 Tu lista está vacía
         </Typography>
         <Typography variant='body2' color='text.secondary' mt={1}>
           Busca y agrega algunos Pokémon para comenzar
         </Typography>
-      </Box>
+      </Card>
     )
   }
 
