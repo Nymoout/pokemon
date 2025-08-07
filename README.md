@@ -1,6 +1,5 @@
 # 🎯 Mi Lista de Pokémon
-
-Una aplicación web moderna para gestionar tu lista de Pokémon deseados, construida con React, TypeScript y Material-UI.
+ Prueba Tecnica
 
 ## 📋 Descripción del Proyecto
 
