@@ -106,7 +106,9 @@ export default function SearchPokemon(
 
       {
         error && (
-          <Alert severity='error' sx={{ mb: 2 }}>
+          <Alert severity='error'
+            sx={{ my: 2 }}
+          >
             {error}
           </Alert>
         )
@@ -114,7 +116,12 @@ export default function SearchPokemon(
 
       {
         searchResult && (
-          <Card elevation={2}>
+          <Card
+            sx={{
+              my: 4
+            }}
+            elevation={2}
+          >
             <CardContent>
               <Box display='flex' alignItems='center' gap={3}>
                 <Box
