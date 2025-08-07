@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { type Pokemon, type PokemonApiResponse } from '../App'
 import PokemonCard from './PokemonCard'
+import pokemonImage from '../../public/who_is_that_pokemon.webp'
 import axios from 'axios'
 import { Card } from '@mui/material'
 import { responseToPokemon } from './responseToPokemon'
@@ -31,13 +32,22 @@ const PokemonCardLoader = (props: Props) => {
     <Card
       elevation={2}
       sx={{
-        height: '100%',
         display: 'flex',
+        width: 300,
+        height: 362,
         flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
         border: '2px solid #6d6d6dff'
       }}
     >
-      Who is that pokemon?
+      <img
+        src={pokemonImage}
+        style={{
+          width: '100%', height: '100%',
+          boxShadow: '0 0 25px 5px rgba(67, 67, 67, 0.1)'
+        }}
+      />
     </Card>
   )
 

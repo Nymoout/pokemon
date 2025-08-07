@@ -65,7 +65,6 @@ export default function SearchPokemon(
 
   const handleAddPokemon = () => {
     if (searchResult) {
-      console.log('Adding Pokémon:', searchResult)
       onAddPokemon(responseToPokemon(searchResult))
       setSearchResult(null)
       setSearchTerm('')

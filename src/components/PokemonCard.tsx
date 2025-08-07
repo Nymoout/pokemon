@@ -47,10 +47,14 @@ export default function PokemonCard({
         flexDirection: 'column',
         opacity: pokemon.isCaptured ? 0.8 : 1,
         border: pokemon.isCaptured ? '2px solid #4caf50' : 'none',
+        boxShadow: pokemon.isCaptured ? '0 0 25px 5px rgba(0, 255, 47, 0.42)' : '0 0 25px 5px rgba(67, 67, 67, 0.1)',
         width: 300,
-        transition: 'scale 500ms ease-in-out',
-        '&:hover:' : {
-          scale: '105%'
+        transition: 'scale 200ms ease-in-out, box-shadow 300ms ease-in-out',
+        '&:hover' : {
+          scale: '105%',
+          border:'2px solid #d5cfcfff',
+          boxShadow: '0 0 25px 5px rgba(0, 123, 255, 0.6)',
+          zIndex: 1,
         },
       }}
     >
@@ -84,6 +88,7 @@ export default function PokemonCard({
             src={pokemon.image}
             alt={pokemon.name}
             sx={{ width: 100, height: 100 }}
+            loading='lazy'
           />
         </Box>
 

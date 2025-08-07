@@ -7,7 +7,6 @@ import {
   Box,
   Alert,
   Snackbar,
-  Paper,
   Card
 } from '@mui/material'
 import SearchPokemon from './components/SearchPokemon'
